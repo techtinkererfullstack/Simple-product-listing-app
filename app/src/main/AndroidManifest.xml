@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProuductListing">
         <activity
+            android:name=".AddNewProductScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ProductListScreen"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

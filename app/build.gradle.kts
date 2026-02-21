@@ -1,8 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.devtools.ksp")
 }
 
 android {
+    buildFeatures {
+        viewBinding = true
+    }
+
+
     namespace = "com.example.prouductlisting"
     compileSdk {
         version = release(36) {
@@ -44,4 +50,13 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    val roomVersion = "2.6.1" // Use the latest stable version
+    implementation("androidx.room:room-runtime:$roomVersion")
+
+    // IMPORTANT: Use ksp (or kapt) instead of annotationProcessor for Kotlin code
+    ksp("androidx.room:room-compiler:$roomVersion")
+
+    implementation("androidx.room:room-ktx:$roomVersion")
+
 }

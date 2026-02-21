@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="15dp"
+    android:background="@drawable/rounded_corner"
+    android:weightSum="1"
+    android:layout_margin="3dp"
+    >
+    <TextView
+        android:id="@+id/product_image_nameTV"
+        android:layout_weight=".1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="Product1"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_corder_inside_card"
+        />
+
+    <LinearLayout
+        android:layout_weight=".7"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="3dp"
+        android:paddingStart="10dp"
+        >
+        <TextView
+            android:id="@+id/product_nameTV"
+            android:layout_weight=".1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product1"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/secondary"
+            />
+
+        <TextView
+            android:id="@+id/product_category"
+            android:layout_weight=".1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Leather"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="@color/secondary"
+            />
+
+        <TextView
+            android:id="@+id/product_priceTV"
+            android:layout_weight=".1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1200 tk"
+            android:textStyle="italic|bold"
+            android:textSize="15sp"
+            android:textColor="@color/secondary"
+            />
+        <TextView
+            android:id="@+id/product_postDateTV"
+            android:layout_weight=".1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="21/02/2026"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:textColor="@color/secondary"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_weight=".2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="3dp"
+        android:weightSum="1"
+        android:gravity="center"
+        >
+        <ImageButton
+            android:layout_weight=".5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_edit"
+            android:tint="@color/cardview_dark_background"
+            android:backgroundTint="@color/secondary"
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_corder_inside_card"
+            />
+
+        <ImageButton
+            android:layout_weight=".5"
+            android:layout_margin="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_delete"
+            android:tint="@color/cardview_dark_background"
+            android:backgroundTint="@color/secondary"
+            android:background="@drawable/rounded_corder_inside_card"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>
