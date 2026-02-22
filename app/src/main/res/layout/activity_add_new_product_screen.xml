@@ -35,7 +35,7 @@
             android:background="@drawable/rounded_corder_inside_card"
             android:hint="Enter Image Name"
             android:padding="8dp"
-            android:textColor="@color/secondary"
+            android:textColor="@color/primary"
             android:textSize="18sp" />
 
         <EditText
@@ -46,7 +46,7 @@
             android:background="@drawable/rounded_corder_inside_card"
             android:hint="Enter Product Name"
             android:padding="8dp"
-            android:textColor="@color/secondary"
+            android:textColor="@color/primary"
             android:textSize="18sp" />
 
         <EditText
@@ -57,7 +57,7 @@
             android:background="@drawable/rounded_corder_inside_card"
             android:hint="Enter product category"
             android:padding="8dp"
-            android:textColor="@color/secondary"
+            android:textColor="@color/primary"
             android:textSize="18sp" />
 
         <EditText
@@ -68,7 +68,7 @@
             android:background="@drawable/rounded_corder_inside_card"
             android:hint="Enter product price"
             android:padding="8dp"
-            android:textColor="@color/secondary"
+            android:textColor="@color/primary"
             android:textSize="18sp" />
 
         <EditText
@@ -79,14 +79,14 @@
             android:background="@drawable/rounded_corder_inside_card"
             android:hint="Enter Added Date"
             android:padding="8dp"
-            android:textColor="@color/secondary"
+            android:textColor="@color/primary"
             android:textSize="18sp" />
 
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/order_button"
+        android:id="@+id/save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
