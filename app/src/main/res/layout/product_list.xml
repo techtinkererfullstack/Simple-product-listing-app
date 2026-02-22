@@ -8,14 +8,13 @@
     android:weightSum="1"
     android:layout_margin="3dp"
     >
-    <TextView
-        android:id="@+id/product_image_nameTV"
+    <ImageView
+        android:id="@+id/product_imageIV"
         android:layout_weight=".1"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:text="Product1"
+        android:src="@drawable/rounded_corder_inside_card"
         android:gravity="center"
-        android:textStyle="bold"
         android:background="@drawable/rounded_corder_inside_card"
         />
 
@@ -94,7 +93,7 @@
             android:tint="@color/cardview_dark_background"
             android:backgroundTint="@color/secondary"
             android:layout_margin="3dp"
-            android:background="@drawable/rounded_corder_inside_card"
+            android.background="@drawable/rounded_corder_inside_card"
             />
 
         <ImageButton

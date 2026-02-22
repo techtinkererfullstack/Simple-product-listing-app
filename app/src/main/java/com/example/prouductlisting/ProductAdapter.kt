@@ -1,5 +1,6 @@
 package com.example.prouductlisting
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -27,8 +28,10 @@ class ProductAdapter(
     ) {
         val product = list[position]
 
+        if (product.productImageName.isNotEmpty()) {
+            holder.binding.productImageIV.setImageURI(Uri.parse(product.productImageName))
+        }
 
-        holder.binding.productImageNameTV.text = product.productImageName.toString()
         holder.binding.productNameTV.text = product.productName.toString()
         holder.binding.productCategory.text = product.productCategory.toString()
         holder.binding.productPriceTV.text = product.productPrice.toString()

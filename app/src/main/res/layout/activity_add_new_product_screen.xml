@@ -26,23 +26,29 @@
         android:orientation="vertical"
         android:paddingHorizontal="30dp">
 
-
-        <EditText
-            android:id="@+id/imageNameET"
+        <ImageView
+            android:id="@+id/imageName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_corder_inside_card"
-            android:hint="Enter Image Name"
             android:padding="8dp"
-            android:textColor="@color/primary"
-            android:textSize="18sp" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/rounded_corder_inside_card"/>
+
+
+        <Button
+            android:id="@+id/select_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Select Image"/>
 
         <EditText
             android:id="@+id/product_nameET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_corder_inside_card"
             android:hint="Enter Product Name"
             android:padding="8dp"
@@ -53,7 +59,7 @@
             android:id="@+id/product_categoryET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_corder_inside_card"
             android:hint="Enter product category"
             android:padding="8dp"
@@ -64,7 +70,7 @@
             android:id="@+id/product_PriceET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_corder_inside_card"
             android:hint="Enter product price"
             android:padding="8dp"
@@ -75,7 +81,7 @@
             android:id="@+id/added_dateET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_corder_inside_card"
             android:hint="Enter Added Date"
             android:padding="8dp"
