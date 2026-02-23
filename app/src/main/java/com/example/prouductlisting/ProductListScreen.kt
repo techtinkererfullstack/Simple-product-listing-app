@@ -45,7 +45,7 @@ class ProductListScreen : AppCompatActivity() {
     private fun loadData() {
 
         val list = db.productDao().getAllProducts()
-
+        binding.totalProduct.text = "Total Products: ${list.size}"
         val adapter = ProductAdapter(
             list,
 

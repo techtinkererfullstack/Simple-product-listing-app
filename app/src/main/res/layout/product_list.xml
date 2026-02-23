@@ -90,10 +90,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_menu_edit"
-            android:tint="@color/cardview_dark_background"
+
             android:backgroundTint="@color/secondary"
             android:layout_margin="3dp"
-            android.background="@drawable/rounded_corder_inside_card"
+            android:background="@drawable/rounded_corder_inside_card"
             />
 
         <ImageButton
@@ -103,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_menu_delete"
-            android:tint="@color/cardview_dark_background"
+
             android:backgroundTint="@color/secondary"
             android:background="@drawable/rounded_corder_inside_card"
             />
