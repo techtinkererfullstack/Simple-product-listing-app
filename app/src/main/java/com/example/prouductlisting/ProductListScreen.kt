@@ -2,15 +2,18 @@ package com.example.prouductlisting
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.prouductlisting.databinding.ActivityProductListScreenBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class ProductListScreen : AppCompatActivity() {
     private lateinit var binding: ActivityProductListScreenBinding
+
 
     private lateinit var db: AppDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,9 +63,17 @@ class ProductListScreen : AppCompatActivity() {
 
             },
             onDelete = {product ->
-                db.productDao().delete(product)
-                loadData()
 
+                val view = layoutInflater.inflate(R.layout.dialog_delete, null)
+                val dialog = MaterialAlertDialogBuilder(this)
+                    .setView(view)
+                    .create()
+                view.findViewById<Button>(R.id.btnConfirmDelete).setOnClickListener {
+                    db.productDao().delete(product)
+                    loadData()
+                    dialog.dismiss()
+                }
+                dialog.show()
             }
         )
 
