@@ -56,7 +56,10 @@ dependencies {
 
     // IMPORTANT: Use ksp (or kapt) instead of annotationProcessor for Kotlin code
     ksp("androidx.room:room-compiler:$roomVersion")
-
     implementation("androidx.room:room-ktx:$roomVersion")
+
+
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.10.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0")
 
 }
