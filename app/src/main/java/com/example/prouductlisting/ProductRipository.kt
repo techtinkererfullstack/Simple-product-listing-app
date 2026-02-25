@@ -19,4 +19,11 @@ class ProductRipository(private val productDao: ProductDao) {
         productDao.delete(product)
     }
 
+    fun getProductByIdRepo(productId: Int): Product {
+        return productDao.getProductById(productId)
+    }
+
 }
+
+
+

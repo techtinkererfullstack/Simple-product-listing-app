@@ -33,6 +33,10 @@ class ProductViewModel(application: Application) : AndroidViewModel(application)
         getAllProductsViewModel()
     }
 
+    fun getProductById(productId: Int): Product {
+        return repository.getProductByIdRepo(productId)
+    }
+
 
 }
 

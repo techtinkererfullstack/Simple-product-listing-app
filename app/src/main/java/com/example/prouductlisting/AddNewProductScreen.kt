@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.example.prouductlisting.databinding.ActivityAddNewProductScreenBinding
 
 class AddNewProductScreen : AppCompatActivity() {
@@ -13,6 +14,9 @@ class AddNewProductScreen : AppCompatActivity() {
     private lateinit var binding: ActivityAddNewProductScreenBinding
     private var selectedImageUri: String = ""
     private var productId: Int = -1
+    private lateinit var viewModel: ProductViewModel
+
+
 
     private val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
         if (uri != null) {
@@ -28,11 +32,14 @@ class AddNewProductScreen : AppCompatActivity() {
         binding = ActivityAddNewProductScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        viewModel = ViewModelProvider(this)[ProductViewModel::class.java]
+
+
         productId = intent.getIntExtra("id", -1)
 
         if (productId != -1) {
-            val db = AppDatabase.getDatabase(this)
-            val product = db.productDao().getProductById(productId)
+
+            val product = viewModel.getProductById(productId)
 
             binding.productNameET.setText(product.productName)
             binding.productCategoryET.setText(product.productCategory)
@@ -63,11 +70,11 @@ class AddNewProductScreen : AppCompatActivity() {
                 productImageName = selectedImageUri
             )
 
-            val db = AppDatabase.getDatabase(this)
+
             if (productId != -1) {
-                db.productDao().update(product)
+               viewModel.updateProductViewModel(product)
             } else {
-                db.productDao().insert(product)
+                viewModel.insertProductViewModel(product)
             }
 
             finish()
